@@ -1,0 +1,18 @@
+{
+  "name": "NodeBookShop",
+  "version": "0.0.1",
+  "description": "Node JS Book Shop.",
+  "author": {
+	    "name": "Rohan Bhanderi",
+	    "email": "rohan.bhanderi@sjsu.edu"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "~3.4.4",
+    "mongoose": "^3.8.20"
+  },
+  "main": "app.js"
+}
