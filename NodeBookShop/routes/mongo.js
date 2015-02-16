@@ -4,8 +4,11 @@ var config = require('./config');
 function getConnection(){
 	//Connect to MongoDB
     var dbHost = config.mongo.host;
+	console.log('host:' +dbHost);
     var dbPort = config.mongo.port;
+	console.log('host:' +dbPort);
     var dbName = config.mongo.db;
+	console.log('host:' +db);
     var dbUser = config.mongo.username;
     var dbPass = config.mongo.password;
     var dbURI = 'mongodb://' + dbUser + ':'+ dbPass +'@'+ dbHost + ':' + dbPort + '/' + dbName;
