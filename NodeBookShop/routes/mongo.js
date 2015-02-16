@@ -9,7 +9,11 @@ function getConnection(){
     var dbUser = config.mongo.username;
     var dbPass = config.mongo.password;
     var dbURI = 'mongodb://' + dbUser + ':'+ dbPass +'@'+ dbHost + ':' + dbPort + '/' + dbName;
-    mongoose.connect(dbURI);
+    mongoose.connect(dbURI, function(err) {
+		if (err) {
+		  console.error('Failed to connect to mongo on startup', err);
+		}
+	});
     return mongoose;
 }
 
