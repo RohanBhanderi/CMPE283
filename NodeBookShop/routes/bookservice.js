@@ -48,7 +48,7 @@ function addBook(req,res) {
     book.save(function (err) {
         if (!err) {
             console.log("Book added successfully !!");
-			Books.findOne({ bookId: bookId },"-_id -__v",function(err, bookResults){
+			Books.findOne({ bookId: req.body.bookId },"-_id -__v",function(err, bookResults){
 				if (!err) {
 					console.log(bookResults);
 					res.writeHead(201,{"Content-type":"application/json"});
